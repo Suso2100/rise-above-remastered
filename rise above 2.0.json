@@ -187,6 +187,14 @@
         "name": "NewSprite9",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewPanelSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewPanelSprite",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -400,7 +408,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.3541128223539149,
+        "zoomFactor": 0.2541622678027227,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -442,6 +450,23 @@
             },
             {
               "name": "camera_limits"
+            },
+            {
+              "name": "Camera_Start"
+            }
+          ]
+        },
+        {
+          "name": "blocked_elements",
+          "objects": [
+            {
+              "name": "Floor"
+            },
+            {
+              "name": "camera_limits"
+            },
+            {
+              "name": "spawn_point"
             }
           ]
         }
@@ -452,21 +477,39 @@
           "persistentUuid": "e048b33c-eabe-45d8-b956-83df4050064f",
           "type": "number",
           "value": 100
+        },
+        {
+          "name": "GameMap",
+          "persistentUuid": "6fa525b6-88e9-410e-8734-0525f18ae8cf",
+          "type": "structure",
+          "children": []
+        },
+        {
+          "name": "Map2_ahora_es_personal",
+          "persistentUuid": "54c9060a-0bd5-4e90-a040-819f0ec20fef",
+          "type": "structure",
+          "children": []
+        },
+        {
+          "name": "map_lector",
+          "persistentUuid": "8283d6e3-2955-4e1d-9c73-404b44be5aca",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 958,
+          "depth": 1.50058616648,
+          "height": 1440,
           "keepRatio": true,
           "layer": "",
           "name": "camera",
           "persistentUuid": "4d1170b2-ef9a-4023-8380-52c1ef8f1ddc",
-          "width": 1706,
-          "x": -212,
-          "y": -119,
+          "width": 2560,
+          "x": 544,
+          "y": 384,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -625,7 +668,7 @@
               ]
             },
             {
-              "name": "id",
+              "name": "ID",
               "persistentUuid": "f9de512f-7827-4ac3-80b3-d776cec39db1",
               "type": "number",
               "value": 1
@@ -1227,7 +1270,7 @@
               ]
             },
             {
-              "name": "id",
+              "name": "ID",
               "persistentUuid": "9e49532a-7355-4dbb-b4a2-8ed606c4a7d7",
               "type": "number",
               "value": 2
@@ -1339,7 +1382,7 @@
               ]
             },
             {
-              "name": "id",
+              "name": "ID",
               "persistentUuid": "d3ca4f47-babd-48bb-825c-142150db3a66",
               "type": "number",
               "value": 3
@@ -1548,8 +1591,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 24,
+                        "y": 24
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1657,6 +1700,73 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 958,
+          "leftMargin": 8,
+          "name": "Camera_Start",
+          "persistentUuid": "df53c695-b093-448e-9340-e46314ca29a3",
+          "rightMargin": 8,
+          "texture": "NewPanelSprite",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 1706,
+          "variables": [
+            {
+              "name": "data",
+              "persistentUuid": "474485e1-cd6d-49a6-ba33-18b3f40273d4",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "PosX",
+                  "persistentUuid": "3c050f3c-0d2f-46e8-b20d-15d6c377f5d4",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "PosY",
+                  "persistentUuid": "9c98ff0d-d9bc-4295-bab4-dd9937acca65",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Rot",
+                  "persistentUuid": "58cad45e-56ca-4c07-af15-71c0705edadb",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "ScaleX",
+                  "persistentUuid": "e5987f60-2195-4420-bd02-528ade68e21e",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "ScaleY",
+                  "persistentUuid": "7329054f-4106-4c8a-b193-96b50d203e99",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "ID",
+              "persistentUuid": "f9de512f-7827-4ac3-80b3-d776cec39db1",
+              "type": "number",
+              "value": 4
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "checkCollisionMask": true,
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable"
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1687,6 +1797,9 @@
           },
           {
             "objectName": "camera_limits"
+          },
+          {
+            "objectName": "Camera_Start"
           },
           {
             "objectName": "create_site"
@@ -1730,7 +1843,7 @@
               },
               "parameters": [
                 "",
-                "0.75",
+                "0.5",
                 "",
                 ""
               ]
@@ -1741,7 +1854,7 @@
               },
               "parameters": [
                 "",
-                "0.75",
+                "0.5",
                 "\"level\"",
                 ""
               ]
@@ -1947,7 +2060,7 @@
                   },
                   "parameters": [
                     "create_site",
-                    "build_elements",
+                    "blocked_elements",
                     "",
                     "",
                     "yes"
@@ -1988,10 +2101,21 @@
                   },
                   "parameters": [
                     "create_site",
-                    "build_elements",
+                    "blocked_elements",
                     "",
                     "",
                     "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "Camera_Start",
+                    "spawn_point",
+                    "<",
+                    "1"
                   ]
                 }
               ],
@@ -2029,7 +2153,7 @@
                   },
                   "parameters": [
                     "create_site",
-                    "build_elements",
+                    "blocked_elements",
                     "",
                     "",
                     "yes"
@@ -2044,6 +2168,45 @@
                   "parameters": [
                     "",
                     "camera_limits",
+                    "round(CursorX() /48) * 48",
+                    "round(CursorY() /48) * 48",
+                    "\"level\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Num4\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "Camera_Start",
+                    "Camera_Start",
+                    "<",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Camera_Start",
                     "round(CursorX() /48) * 48",
                     "round(CursorY() /48) * 48",
                     "\"level\""
@@ -3510,7 +3673,7 @@
                     "value": "ClearVariableChildren"
                   },
                   "parameters": [
-                    "Map"
+                    "GameMap"
                   ]
                 }
               ],
@@ -3525,9 +3688,9 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "Map[ToString(build_elements.X()) + \"_\" + ToString(build_elements.Y())].ID",
+                        "GameMap[\n    ToString(build_elements.X()) + \"_\" +\n    ToString(build_elements.Y()) + \"_\" +\n    ToString(build_elements.Width()) + \"_\" +\n    ToString(build_elements.Height()) + \"_\" +\n    ToString(build_elements.Angle()) + \"_\" +\n    ToString(build_elements.Variable(ID))\n].ID",
                         "=",
-                        "build_elements.id"
+                        "build_elements.ID"
                       ]
                     },
                     {
@@ -3535,7 +3698,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "Map[ToString(build_elements.X()) + \"_\" + ToString(build_elements.Y())].Rot",
+                        "GameMap[\n    ToString(build_elements.X()) + \"_\" +\n    ToString(build_elements.Y()) + \"_\" +\n    ToString(build_elements.Width()) + \"_\" +\n    ToString(build_elements.Height()) + \"_\" +\n    ToString(build_elements.Angle()) + \"_\" +\n    ToString(build_elements.Variable(ID))\n].Rot",
                         "=",
                         "build_elements.Angle()"
                       ]
@@ -3545,7 +3708,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "Map[ToString(build_elements.X()) + \"_\" + ToString(build_elements.Y())].PosX",
+                        "GameMap[\n    ToString(build_elements.X()) + \"_\" +\n    ToString(build_elements.Y()) + \"_\" +\n    ToString(build_elements.Width()) + \"_\" +\n    ToString(build_elements.Height()) + \"_\" +\n    ToString(build_elements.Angle()) + \"_\" +\n    ToString(build_elements.Variable(ID))\n].PosX",
                         "=",
                         "build_elements.X()"
                       ]
@@ -3555,7 +3718,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "Map[ToString(build_elements.X()) + \"_\" + ToString(build_elements.Y())].PosY",
+                        "GameMap[\n    ToString(build_elements.X()) + \"_\" +\n    ToString(build_elements.Y()) + \"_\" +\n    ToString(build_elements.Width()) + \"_\" +\n    ToString(build_elements.Height()) + \"_\" +\n    ToString(build_elements.Angle()) + \"_\" +\n    ToString(build_elements.Variable(ID))\n].PosY",
                         "=",
                         "build_elements.Y()"
                       ]
@@ -3565,7 +3728,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "Map[ToString(build_elements.X()) + \"_\" + ToString(build_elements.Y())].ScaleX",
+                        "GameMap[\n    ToString(build_elements.X()) + \"_\" +\n    ToString(build_elements.Y()) + \"_\" +\n    ToString(build_elements.Width()) + \"_\" +\n    ToString(build_elements.Height()) + \"_\" +\n    ToString(build_elements.Angle()) + \"_\" +\n    ToString(build_elements.Variable(ID))\n].ScaleX",
                         "=",
                         "build_elements.Width()"
                       ]
@@ -3575,11 +3738,127 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "Map[ToString(build_elements.X()) + \"_\" + ToString(build_elements.Y())].ScaleY",
+                        "GameMap[\n    ToString(build_elements.X()) + \"_\" +\n    ToString(build_elements.Y()) + \"_\" +\n    ToString(build_elements.Width()) + \"_\" +\n    ToString(build_elements.Height()) + \"_\" +\n    ToString(build_elements.Angle()) + \"_\" +\n    ToString(build_elements.Variable(ID))\n].ScaleY",
                         "=",
                         "build_elements.Height()"
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FileSystem::SaveStringToFileSync"
+                      },
+                      "parameters": [
+                        "ToJSON(GameMap)",
+                        "FileSystem::UserdataPath() + \"/mapa.json\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"LControl\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"l\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ClearVariableChildren"
+                  },
+                  "parameters": [
+                    "Map"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FileSystem::LoadStringFromFileSync"
+                  },
+                  "parameters": [
+                    "map_lector",
+                    "FileSystem::UserdataPath() + \"/mapa.json\"",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "map_lector",
+                    "Map"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"LControl\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Space\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"level\"",
+                    ""
                   ]
                 }
               ]
@@ -3892,16 +4171,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 816,
+          "customSize": false,
+          "height": 0,
           "keepRatio": true,
           "layer": "level",
-          "name": "camera_stop",
-          "persistentUuid": "e9965374-45b9-490c-a0b3-2d20c1ba528f",
-          "width": 48,
-          "x": 1536,
-          "y": -48,
+          "name": "Camera_Start",
+          "persistentUuid": "6c8f0259-9d2f-4614-9b72-0327f6f6db88",
+          "width": 0,
+          "x": -528,
+          "y": -576,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -4805,8 +5083,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 24,
+                        "y": 24
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -4838,6 +5116,73 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 8,
+          "height": 958,
+          "leftMargin": 8,
+          "name": "Camera_Start",
+          "persistentUuid": "450744e8-1fc8-4a78-a05a-2d2755403f9c",
+          "rightMargin": 8,
+          "texture": "NewPanelSprite",
+          "tiled": false,
+          "topMargin": 8,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 1706,
+          "variables": [
+            {
+              "name": "data",
+              "persistentUuid": "42fc603a-2374-4bc5-9290-09c1f844680d",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "PosX",
+                  "persistentUuid": "2723f8d9-fd87-40a3-ad41-8e5bbabc9f9c",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "PosY",
+                  "persistentUuid": "5e2d659b-8ca6-40b8-9151-58dda4ea2306",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Rot",
+                  "persistentUuid": "d56a2112-b5cb-4e16-9565-65518833521b",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "ScaleX",
+                  "persistentUuid": "4a127f7e-e3fb-4143-a8c3-d1bd083c5511",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "ScaleY",
+                  "persistentUuid": "3988a35a-7790-4d6e-be76-68923b675e9e",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "ID",
+              "persistentUuid": "dca2ef1a-f5be-49ed-8d91-ef6665aa0522",
+              "type": "number",
+              "value": 4
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable",
+              "checkCollisionMask": true
             }
           ]
         }
@@ -4876,6 +5221,9 @@
           },
           {
             "objectName": "camera"
+          },
+          {
+            "objectName": "Camera_Start"
           }
         ]
       },
@@ -4916,6 +5264,118 @@
               ]
             }
           ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "camera",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "left"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "camera",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "right"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "camera",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "down"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "camera",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "up"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "camera",
+                    "TopDownMovement"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5079,6 +5539,18 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "camera_stop",
+                        "Map[mapchildname].PosX",
+                        "Map[mapchildname].PosY",
+                        "\"level\""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetAngle"
                       },
                       "parameters": [
@@ -5097,17 +5569,67 @@
                         "Map[mapchildname].ScaleX",
                         "Map[mapchildname].ScaleY"
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Map[mapchildname].ID",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "Camera_Start",
+                        "=",
+                        "Map[mapchildname].PosX",
+                        "=",
+                        "Map[mapchildname].PosY"
+                      ]
                     },
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "SetAngle"
                       },
                       "parameters": [
-                        "",
-                        "camera_stop",
-                        "Map[mapchildname].PosX",
-                        "Map[mapchildname].PosY",
-                        "\"level\""
+                        "Camera_Start",
+                        "=",
+                        "Map[mapchildname].Rot"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetSize"
+                      },
+                      "parameters": [
+                        "Camera_Start",
+                        "Resizable",
+                        "Map[mapchildname].ScaleX",
+                        "Map[mapchildname].ScaleY"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "camera",
+                        "=",
+                        "Camera_Start.X()",
+                        "=",
+                        "Camera_Start.Y()"
                       ]
                     }
                   ]
